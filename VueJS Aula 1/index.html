@@ -87,13 +87,14 @@
                 allComments() {
                     return this.comments.map(comment => ({
                         ...comment,
+                        // if ternario para validar
                         name: comment.name.trim() === '' ? 'Anônimo' : comment.name
                     }))
                 }
             },
             // essa propriedade monitora alterações em qualquer propriedade
             watch: {
-                comments(val) {
+                Comments(val) {
                     console.log('val', val);
                 }
             }
